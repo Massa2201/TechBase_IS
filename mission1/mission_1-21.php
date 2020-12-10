@@ -12,14 +12,18 @@
 </form>
 <?php
     $num = $_POST["num"];
-    if ($num % 15 == 0) {
-        echo "FizzBuzz<br>";
-    }else if ($num % 3 == 0) {
-        echo "Fizz<br>";
-    }else if ($num % 5 == 0) {
-        echo "Buzz<br>";
+    if (isset ($_POST["num"]) ) {
+        if ($num % 15 == 0) {
+            echo "FizzBuzz<br>";
+        }else if ($num % 3 == 0) {
+            echo "Fizz<br>";
+        }else if ($num % 5 == 0) {
+            echo "Buzz<br>";
+        }else {
+            echo $num . "<br>";
+        }
     }else {
-        echo $num . "<br>";
+        $num = "15";
     }
 ?>
 
