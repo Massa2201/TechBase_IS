@@ -1,7 +1,7 @@
 <?php
 
     $str = "Hello World" . PHP_EOL;
-    $filename="mission_1-25.txt";
+    $filename="mission_1-24.txt";
     $fp = fopen($filename,"w");
     fwrite($fp,$str);
     fclose($fp);
