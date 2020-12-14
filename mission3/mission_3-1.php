@@ -14,7 +14,7 @@
     $text = $_POST["text"];
     $filename="mission_3-1.txt";
     date_default_timezone_set('Asia/Tokyo');
-    $date = date("Y/m/d H:i分:");
+    $date = date("Y/m/d H:i:s");
     $user_name = "phpくん"; 
     
     if (isset ($_POST["text"]) ) {
