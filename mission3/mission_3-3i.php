@@ -67,7 +67,7 @@
         if($line_div[0]==$deleteNo){
             /*foreach($lines as $line);*/
             array_splice($lines,$num,1);
-            file_put_contents($filename,implode("\n",$lines));
+            file_put_contents($filename,implode("\n",$lines).PHP_EOL);
             }
         }
     }
