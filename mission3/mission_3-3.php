@@ -50,12 +50,12 @@
     if (isset ($_POST["num"]) ) {
         if(!empty($num)) {
             $delete = $_POST['num'];
-            $del_con = file("mission_3-3.txt");
+            $del_con = file($filename, FILE_IGNORE_NEW_LINES);
             for ($n = 0; $n < count($del_con); $n++) {
                 $del_data = explode("<>", $del_con[$n]);
                 if ($del_data[0] == $delete) {
                     array_splice($del_con, $n, 1);
-                    file_put_contents($filename, implode("\n", $del_con));
+                    file_put_contents($filename, implode("\n", $del_con).PHP_EOL);
                     echo "指定した" . $filename . "の文章を削除しました。";
                 }
             }
