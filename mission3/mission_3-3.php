@@ -8,7 +8,8 @@
 
     <p>新規投稿フォーム</p>
     <form action = "" method = "post">
-        <input type = "text" name = "text">
+        name: <input type="text" name="name"><br>
+        comment: <input type = "text" name = "text"><br>
         <input type = "submit" name = "button01">
     </form>
 
@@ -21,10 +22,10 @@
 <?php
     //---------入力フォーム開始---------
     $text = $_POST["text"];
+    $user_name = $_POST["name"];
     $filename="mission_3-3.txt";
     date_default_timezone_set('Asia/Tokyo');
     $date = date("Y/m/d H:i:s");
-    $user_name = "phpくん"; 
     
     if (isset ($_POST["text"]) ) {
         if(!empty($text)) {
