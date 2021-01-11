@@ -93,6 +93,9 @@
                             fwrite($fp, $comment[0]."<>".$comment[1]."<>".htmlspecialchars($comment[2])."<>".$comment[3]."\n");
                         }
                     }
+                    $del_con = file($filename, FILE_IGNORE_NEW_LINES);
+                    array_pop ($del_con);
+                    file_put_contents($filename, implode("\n", $del_con).PHP_EOL);
         }
     }
                     
